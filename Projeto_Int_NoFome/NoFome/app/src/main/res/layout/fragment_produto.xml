@@ -5,7 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProdutoFragment">
+    tools:context=".ProdutoFragment"
+    android:background="@drawable/bg_nofome">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,13 +14,17 @@
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginRight="16dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/bg_nofome"/>
+
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingAdd"

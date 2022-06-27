@@ -37,9 +37,9 @@ class Tipocestaadapter(
             .into(holder.binding.imageView)
         holder.binding.textCestabasica1.text = produto.nomeMarca
         holder.binding.textValor.text = produto.valor.toString()
-        holder.itemView.setOnClickListener{
-            basketClickListener.onBasketClickListener(produto)
-        }
+        holder.binding.atualizarCestabutton.setOnClickListener{
+             basketClickListener.onBasketClickListener(produto)
+            }
         holder.binding.buttonDelete.setOnClickListener{
             showAlertDialog(produto.id)
         }
