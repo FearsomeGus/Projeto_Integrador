@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.generatioon.nofome.databinding.FragmentProdutoBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -25,7 +26,7 @@ class ProdutoFragment : Fragment(), BasketClickListener {
         mainViewModel.listprodut()
 
         val adapter = Tipocestaadapter(this, mainViewModel, requireContext())
-        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.layoutManager = GridLayoutManager(context,2)
         binding.recyclerView.adapter = adapter
         binding.recyclerView.setHasFixedSize(true)
 

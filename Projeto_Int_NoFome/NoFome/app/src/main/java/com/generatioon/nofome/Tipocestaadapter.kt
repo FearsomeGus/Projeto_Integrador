@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.generatioon.nofome.databinding.CardLayoutBinding
 import com.generatioon.nofome.databinding.FragmentCadastroprodutoBinding
 import java.time.temporal.ValueRange
@@ -30,7 +31,10 @@ class Tipocestaadapter(
 
     override fun onBindViewHolder(holder: TipocestaViewHolder, position: Int) {
         val produto = listprodut[position]
-
+        Glide.with(context)
+            .load(produto.imagem)
+            .placeholder(com.bumptech.glide.R.drawable.abc_btn_check_material)
+            .into(holder.binding.imageView)
         holder.binding.textCestabasica1.text = produto.nomeMarca
         holder.binding.textValor.text = produto.valor.toString()
         holder.itemView.setOnClickListener{
