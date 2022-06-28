@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
+    android:layout_marginLeft="-10dp"
     android:padding="10dp"
     app:cardCornerRadius="20dp"
     app:cardElevation="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#ED751C"
         android:orientation="vertical">
 
@@ -21,30 +22,57 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="25sp"
             tools:text="Cesta básica 1" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="105dp"
             android:layout_height="105dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_margin="10dp"
             android:baselineAlignBottom="false"
             android:drawingCacheQuality="high"
             android:textAlignment="center"
             app:srcCompat="@drawable/food_donation" />
 
-        <TextView
-            android:id="@+id/textValor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            tools:text="R$ valor" />
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ED751C"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0"
+                    android:text="R$"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textValor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-22dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    tools:text="R$ valor" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -54,26 +82,27 @@
 
                 <Button
                     android:id="@+id/buttonDelete"
-                    android:layout_width="78dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
                     android:layout_margin="10dp"
-                    android:backgroundTint="#61AB41"
-                    android:text="Delete"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="DEL"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#000000"
+                    android:textColor="#ED751C"
                     android:textSize="12sp" />
 
                 <Button
                     android:id="@+id/atualizarCestabutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="45dp"
                     android:layout_margin="10dp"
-                    android:backgroundTint="#61AB41"
+                    android:backgroundTint="#FFFFFF"
                     android:fontFamily="sans-serif"
-                    android:text="Att"
+                    android:text="ATT"
                     android:textAlignment="center"
-                    android:textColor="#000000"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#ED751C"
                     android:textSize="12sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

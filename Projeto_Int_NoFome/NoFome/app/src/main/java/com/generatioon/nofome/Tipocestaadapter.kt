@@ -33,7 +33,7 @@ class Tipocestaadapter(
         val produto = listprodut[position]
         Glide.with(context)
             .load(produto.imagem)
-            .placeholder(com.bumptech.glide.R.drawable.abc_btn_check_material)
+            .placeholder(com.bumptech.glide.R.drawable.abc_text_cursor_material)
             .into(holder.binding.imageView)
         holder.binding.textCestabasica1.text = produto.nomeMarca
         holder.binding.textValor.text = produto.valor.toString()

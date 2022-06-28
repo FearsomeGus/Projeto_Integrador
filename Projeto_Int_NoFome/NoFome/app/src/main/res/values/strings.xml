@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">NoFome</string>
-    <string name="cadastro">Cadastro de produto</string>
+    <string name="cadastro">CADASTRO \nDE \nPRODUTOS</string>
     <string name="tipoCesta">Tipo de cesta</string>
-    <string name="prodCesta">Produtos</string>
+    <string name="prodCesta">Nome da cesta</string>
     <string name="valorCesta">Valor da cesta</string>
     <string name="linkImagem">Link da imagem</string>
     <string name="obs">Observações</string>
